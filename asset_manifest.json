@@ -1,0 +1,265 @@
+{
+  "generated_by": "game_assets_creator",
+  "method": "procedural_pil_placeholders",
+  "assets": [
+    {
+      "asset": "idle.png",
+      "path": "assets/sprites/player/idle.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "walk.png",
+      "path": "assets/sprites/player/walk.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "attack_1.png",
+      "path": "assets/sprites/player/attack_1.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "attack_2.png",
+      "path": "assets/sprites/player/attack_2.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "attack_3.png",
+      "path": "assets/sprites/player/attack_3.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "dodge.png",
+      "path": "assets/sprites/player/dodge.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "hurt.png",
+      "path": "assets/sprites/player/hurt.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "death.png",
+      "path": "assets/sprites/player/death.png",
+      "generator": "procedural_pil",
+      "notes": "placeholder pixel art spritesheet w/ correct dimensions"
+    },
+    {
+      "asset": "basic/idle",
+      "path": "assets/sprites/enemies/basic/idle.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "basic/walk",
+      "path": "assets/sprites/enemies/basic/walk.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "basic/attack",
+      "path": "assets/sprites/enemies/basic/attack.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "basic/death",
+      "path": "assets/sprites/enemies/basic/death.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "fast/idle",
+      "path": "assets/sprites/enemies/fast/idle.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "fast/walk",
+      "path": "assets/sprites/enemies/fast/walk.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "fast/attack",
+      "path": "assets/sprites/enemies/fast/attack.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "fast/death",
+      "path": "assets/sprites/enemies/fast/death.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tank/idle",
+      "path": "assets/sprites/enemies/tank/idle.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tank/walk",
+      "path": "assets/sprites/enemies/tank/walk.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tank/attack",
+      "path": "assets/sprites/enemies/tank/attack.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tank/death",
+      "path": "assets/sprites/enemies/tank/death.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "follower",
+      "path": "assets/sprites/npcs/follower.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "attack_slash",
+      "path": "assets/effects/combat/attack_slash.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "shield",
+      "path": "assets/effects/god_abilities/shield.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "health_bar_bg",
+      "path": "assets/effects/ui/health_bar_bg.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "health_bar_fill",
+      "path": "assets/effects/ui/health_bar_fill.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "cooldown_bar",
+      "path": "assets/effects/ui/cooldown_bar.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "menu_background",
+      "path": "assets/ui/menu_background.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "title_logo",
+      "path": "assets/ui/title_logo.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "button_idle",
+      "path": "assets/ui/button_idle.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "button_hover",
+      "path": "assets/ui/button_hover.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "button_pressed",
+      "path": "assets/ui/button_pressed.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "level1_ground",
+      "path": "assets/tiles/level1_crossing/ground.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "level1_water",
+      "path": "assets/tiles/level1_crossing/water.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "bridge",
+      "path": "assets/tiles/level1_crossing/bridge.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "obstacles",
+      "path": "assets/tiles/level1_crossing/obstacles.png",
+      "generator": "procedural_pil",
+      "notes": "various sizes sheet"
+    },
+    {
+      "asset": "grass",
+      "path": "assets/tiles/level2_village/grass.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "path",
+      "path": "assets/tiles/level2_village/path.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "building_wall",
+      "path": "assets/tiles/level2_village/building_wall.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "building_roof",
+      "path": "assets/tiles/level2_village/building_roof.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "door",
+      "path": "assets/tiles/level2_village/door.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "dirt",
+      "path": "assets/tiles/level3_warrens/dirt.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tunnel_wall",
+      "path": "assets/tiles/level3_warrens/tunnel_wall.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "tunnel_ceiling",
+      "path": "assets/tiles/level3_warrens/tunnel_ceiling.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "roots",
+      "path": "assets/tiles/level3_warrens/roots.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "stone_floor",
+      "path": "assets/tiles/level4_trial/stone_floor.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "stone_wall",
+      "path": "assets/tiles/level4_trial/stone_wall.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "altar",
+      "path": "assets/tiles/level4_trial/altar.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "corrupted_ground",
+      "path": "assets/tiles/level5_throne/corrupted_ground.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "throne",
+      "path": "assets/tiles/level5_throne/throne.png",
+      "generator": "procedural_pil"
+    },
+    {
+      "asset": "corruption",
+      "path": "assets/tiles/level5_throne/corruption.png",
+      "generator": "procedural_pil"
+    }
+  ]
+}
