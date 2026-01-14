@@ -1,0 +1,147 @@
+{
+  "animations": {
+    "player": {
+      "idle": {
+        "frames": 4,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": true
+      },
+      "walk": {
+        "frames": 8,
+        "frameDuration": 100,
+        "fps": 12,
+        "loop": true
+      },
+      "attack_1": {
+        "frames": 4,
+        "frameDuration": [80, 60, 60, 100],
+        "fps": 20,
+        "loop": false
+      },
+      "attack_2": {
+        "frames": 4,
+        "frameDuration": [80, 60, 60, 100],
+        "fps": 20,
+        "loop": false
+      },
+      "attack_3": {
+        "frames": 5,
+        "frameDuration": [80, 60, 60, 60, 100],
+        "fps": 20,
+        "loop": false
+      },
+      "dodge": {
+        "frames": 6,
+        "frameDuration": 50,
+        "fps": 20,
+        "loop": false
+      },
+      "hurt": {
+        "frames": 2,
+        "frameDuration": 100,
+        "fps": 10,
+        "loop": false
+      },
+      "death": {
+        "frames": 6,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": false
+      }
+    },
+    "enemy_basic": {
+      "idle": {
+        "frames": 4,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": true
+      },
+      "walk": {
+        "frames": 6,
+        "frameDuration": 120,
+        "fps": 10,
+        "loop": true
+      },
+      "attack": {
+        "frames": 5,
+        "frameDuration": [100, 80, 80, 80, 100],
+        "fps": 12,
+        "loop": false
+      },
+      "death": {
+        "frames": 4,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": false
+      }
+    },
+    "enemy_fast": {
+      "idle": {
+        "frames": 3,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": true
+      },
+      "walk": {
+        "frames": 8,
+        "frameDuration": 80,
+        "fps": 15,
+        "loop": true
+      },
+      "attack": {
+        "frames": 4,
+        "frameDuration": [80, 60, 60, 80],
+        "fps": 15,
+        "loop": false
+      },
+      "death": {
+        "frames": 3,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": false
+      }
+    },
+    "enemy_tank": {
+      "idle": {
+        "frames": 4,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": true
+      },
+      "walk": {
+        "frames": 5,
+        "frameDuration": 150,
+        "fps": 8,
+        "loop": true
+      },
+      "attack": {
+        "frames": 6,
+        "frameDuration": [120, 100, 100, 100, 100, 120],
+        "fps": 10,
+        "loop": false
+      },
+      "death": {
+        "frames": 5,
+        "frameDuration": 200,
+        "fps": 6,
+        "loop": false
+      }
+    },
+    "follower": {
+      "idle": {
+        "frames": 2,
+        "frameDuration": 200,
+        "fps": 5,
+        "loop": true
+      },
+      "walk": {
+        "frames": 4,
+        "frameDuration": 120,
+        "fps": 10,
+        "loop": true
+      }
+    }
+  }
+}
+

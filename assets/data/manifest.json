@@ -1,0 +1,216 @@
+{
+  "images": {
+    "placeholder": "/assets/sprites/placeholder.png",
+    "ui_health_bar_bg": "/assets/effects/ui/health_bar_bg.png",
+    "ui_health_bar_fill": "/assets/effects/ui/health_bar_fill.png",
+    "ui_cooldown_bar": "/assets/effects/ui/cooldown_bar.png",
+    "ui_menu_background": "/assets/ui/menu_background.png",
+    "ui_title_logo": "/assets/ui/title_logo.png",
+    "ui_button_idle": "/assets/ui/button_idle.png",
+    "ui_button_hover": "/assets/ui/button_hover.png",
+    "ui_button_pressed": "/assets/ui/button_pressed.png",
+    "tile_ground": "/assets/tiles/level1_crossing/ground.png"
+  },
+  "spriteSheets": {
+    "player_idle": {
+      "src": "/assets/sprites/player/idle.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "player_walk": {
+      "src": "/assets/sprites/player/walk.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 8,
+      "layout": "horizontal"
+    },
+    "player_attack_1": {
+      "src": "/assets/sprites/player/attack_1.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "player_attack_2": {
+      "src": "/assets/sprites/player/attack_2.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "player_attack_3": {
+      "src": "/assets/sprites/player/attack_3.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 5,
+      "layout": "horizontal"
+    },
+    "player_dodge": {
+      "src": "/assets/sprites/player/dodge.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 6,
+      "layout": "horizontal"
+    },
+    "player_hurt": {
+      "src": "/assets/sprites/player/hurt.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 2,
+      "layout": "horizontal"
+    },
+    "player_death": {
+      "src": "/assets/sprites/player/death.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 6,
+      "layout": "horizontal"
+    },
+    "enemy_basic_idle": {
+      "src": "/assets/sprites/enemies/basic/idle.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "enemy_basic_walk": {
+      "src": "/assets/sprites/enemies/basic/walk.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 6,
+      "layout": "horizontal"
+    },
+    "enemy_basic_attack": {
+      "src": "/assets/sprites/enemies/basic/attack.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 5,
+      "layout": "horizontal"
+    },
+    "enemy_basic_death": {
+      "src": "/assets/sprites/enemies/basic/death.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "enemy_fast_idle": {
+      "src": "/assets/sprites/enemies/fast/idle.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 3,
+      "layout": "horizontal"
+    },
+    "enemy_fast_walk": {
+      "src": "/assets/sprites/enemies/fast/walk.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 8,
+      "layout": "horizontal"
+    },
+    "enemy_fast_attack": {
+      "src": "/assets/sprites/enemies/fast/attack.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "enemy_fast_death": {
+      "src": "/assets/sprites/enemies/fast/death.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 3,
+      "layout": "horizontal"
+    },
+    "enemy_tank_idle": {
+      "src": "/assets/sprites/enemies/tank/idle.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "enemy_tank_walk": {
+      "src": "/assets/sprites/enemies/tank/walk.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 5,
+      "layout": "horizontal"
+    },
+    "enemy_tank_attack": {
+      "src": "/assets/sprites/enemies/tank/attack.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 6,
+      "layout": "horizontal"
+    },
+    "enemy_tank_death": {
+      "src": "/assets/sprites/enemies/tank/death.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 5,
+      "layout": "horizontal"
+    },
+    "follower_idle": {
+      "src": "/assets/sprites/npcs/follower.png",
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "frameCount": 2,
+      "layout": "horizontal"
+    },
+    "follower_walk": {
+      "src": "/assets/sprites/npcs/follower.png",
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "effect_slash": {
+      "src": "/assets/effects/combat/attack_slash.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal"
+    },
+    "effect_shield": {
+      "src": "/assets/effects/god_abilities/shield.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 8,
+      "layout": "horizontal"
+    }
+  },
+  "audio": {},
+  "metadata": {
+    "player": {
+      "idle": { "frameDuration": 150, "fps": 8 },
+      "walk": { "frameDuration": 100, "fps": 12 },
+      "attack_1": { "frameDuration": [80, 60, 60, 100], "fps": 20 },
+      "attack_2": { "frameDuration": [80, 60, 60, 100], "fps": 20 },
+      "attack_3": { "frameDuration": [80, 60, 60, 60, 100], "fps": 20 },
+      "dodge": { "frameDuration": 50, "fps": 20 },
+      "hurt": { "frameDuration": 100, "fps": 10 },
+      "death": { "frameDuration": 150, "fps": 8 }
+    },
+    "enemy_basic": {
+      "idle": { "frameDuration": 150, "fps": 8 },
+      "walk": { "frameDuration": 120, "fps": 10 },
+      "attack": { "frameDuration": [100, 80, 80, 80, 100], "fps": 12 },
+      "death": { "frameDuration": 150, "fps": 8 }
+    },
+    "enemy_fast": {
+      "idle": { "frameDuration": 150, "fps": 8 },
+      "walk": { "frameDuration": 80, "fps": 15 },
+      "attack": { "frameDuration": [80, 60, 60, 80], "fps": 15 },
+      "death": { "frameDuration": 150, "fps": 8 }
+    },
+    "enemy_tank": {
+      "idle": { "frameDuration": 150, "fps": 8 },
+      "walk": { "frameDuration": 150, "fps": 8 },
+      "attack": { "frameDuration": [120, 100, 100, 100, 100, 120], "fps": 10 },
+      "death": { "frameDuration": 200, "fps": 6 }
+    }
+  }
+}
+
