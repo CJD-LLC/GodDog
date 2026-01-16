@@ -1,72 +1,71 @@
 {
-  "images": {
-    "placeholder": "/assets/sprites/placeholder.png",
-    "ui_health_bar_bg": "/assets/effects/ui/health_bar_bg.png",
-    "ui_health_bar_fill": "/assets/effects/ui/health_bar_fill.png",
-    "ui_cooldown_bar": "/assets/effects/ui/cooldown_bar.png",
-    "ui_menu_background": "/assets/ui/menu_background.png",
-    "ui_title_logo": "/assets/ui/title_logo.png",
-    "ui_button_idle": "/assets/ui/button_idle.png",
-    "ui_button_hover": "/assets/ui/button_hover.png",
-    "ui_button_pressed": "/assets/ui/button_pressed.png",
-    "tile_ground": "/assets/tiles/level1_crossing/ground.png"
-  },
   "spriteSheets": {
     "player_idle": {
       "src": "/assets/sprites/player/idle.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 4,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "fps": 8,
+      "loop": true
     },
     "player_walk": {
       "src": "/assets/sprites/player/walk.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 8,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "fps": 12,
+      "loop": true
     },
     "player_attack_1": {
       "src": "/assets/sprites/player/attack_1.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 4,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": false
     },
     "player_attack_2": {
       "src": "/assets/sprites/player/attack_2.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 4,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": false
     },
     "player_attack_3": {
       "src": "/assets/sprites/player/attack_3.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 5,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": false
     },
     "player_dodge": {
       "src": "/assets/sprites/player/dodge.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 6,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "fps": 20,
+      "loop": false
     },
     "player_hurt": {
       "src": "/assets/sprites/player/hurt.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 2,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": false
     },
     "player_death": {
       "src": "/assets/sprites/player/death.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 6,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": false
     },
     "enemy_basic_idle": {
       "src": "/assets/sprites/enemies/basic/idle.png",
@@ -152,21 +151,14 @@
       "frameCount": 5,
       "layout": "horizontal"
     },
-    "follower_idle": {
+    "follower": {
       "src": "/assets/sprites/npcs/follower.png",
       "frameWidth": 32,
       "frameHeight": 32,
-      "frameCount": 2,
+      "frameCount": 6,
       "layout": "horizontal"
     },
-    "follower_walk": {
-      "src": "/assets/sprites/npcs/follower.png",
-      "frameWidth": 32,
-      "frameHeight": 32,
-      "frameCount": 4,
-      "layout": "horizontal"
-    },
-    "effect_slash": {
+    "effect_attack_slash": {
       "src": "/assets/effects/combat/attack_slash.png",
       "frameWidth": 64,
       "frameHeight": 64,
@@ -178,39 +170,63 @@
       "frameWidth": 64,
       "frameHeight": 64,
       "frameCount": 8,
-      "layout": "horizontal"
+      "layout": "horizontal",
+      "loop": true
+    },
+    "tile_water": {
+      "src": "/assets/tiles/level1_crossing/water.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 4,
+      "layout": "horizontal",
+      "loop": true
+    },
+    "tile_corruption": {
+      "src": "/assets/tiles/level5_throne/corruption.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameCount": 6,
+      "layout": "horizontal",
+      "loop": true
     }
   },
-  "audio": {},
+  "images": {
+    "ui_menu_background": "/assets/ui/menu_background.png",
+    "ui_title_logo": "/assets/ui/title_logo.png",
+    "ui_button_idle": "/assets/ui/button_idle.png",
+    "ui_button_hover": "/assets/ui/button_hover.png",
+    "ui_button_pressed": "/assets/ui/button_pressed.png",
+    "ui_health_bar_bg": "/assets/effects/ui/health_bar_bg.png",
+    "ui_health_bar_fill": "/assets/effects/ui/health_bar_fill.png",
+    "ui_cooldown_bar": "/assets/effects/ui/cooldown_bar.png",
+    "tile_level1_ground": "/assets/tiles/level1_crossing/ground.png",
+    "tile_level1_bridge": "/assets/tiles/level1_crossing/bridge.png",
+    "tile_level1_obstacles": "/assets/tiles/level1_crossing/obstacles.png",
+    "tile_level2_grass": "/assets/tiles/level2_village/grass.png",
+    "tile_level2_path": "/assets/tiles/level2_village/path.png",
+    "tile_level2_building_wall": "/assets/tiles/level2_village/building_wall.png",
+    "tile_level2_building_roof": "/assets/tiles/level2_village/building_roof.png",
+    "tile_level2_door": "/assets/tiles/level2_village/door.png",
+    "tile_level3_dirt": "/assets/tiles/level3_warrens/dirt.png",
+    "tile_level3_tunnel_wall": "/assets/tiles/level3_warrens/tunnel_wall.png",
+    "tile_level3_tunnel_ceiling": "/assets/tiles/level3_warrens/tunnel_ceiling.png",
+    "tile_level3_roots": "/assets/tiles/level3_warrens/roots.png",
+    "tile_level4_stone_floor": "/assets/tiles/level4_trial/stone_floor.png",
+    "tile_level4_stone_wall": "/assets/tiles/level4_trial/stone_wall.png",
+    "tile_level4_altar": "/assets/tiles/level4_trial/altar.png",
+    "tile_level5_corrupted_ground": "/assets/tiles/level5_throne/corrupted_ground.png",
+    "tile_level5_throne": "/assets/tiles/level5_throne/throne.png"
+  },
+  "audio": {
+    "music_menu": "/assets/audio/music/menu.ogg",
+    "music_level1": "/assets/audio/music/level1.ogg",
+    "sfx_attack": "/assets/audio/sfx/attack.ogg",
+    "sfx_hit": "/assets/audio/sfx/hit.ogg",
+    "sfx_dodge": "/assets/audio/sfx/dodge.ogg",
+    "sfx_god_ability": "/assets/audio/sfx/god_ability.ogg"
+  },
   "metadata": {
-    "player": {
-      "idle": { "frameDuration": 150, "fps": 8 },
-      "walk": { "frameDuration": 100, "fps": 12 },
-      "attack_1": { "frameDuration": [80, 60, 60, 100], "fps": 20 },
-      "attack_2": { "frameDuration": [80, 60, 60, 100], "fps": 20 },
-      "attack_3": { "frameDuration": [80, 60, 60, 60, 100], "fps": 20 },
-      "dodge": { "frameDuration": 50, "fps": 20 },
-      "hurt": { "frameDuration": 100, "fps": 10 },
-      "death": { "frameDuration": 150, "fps": 8 }
-    },
-    "enemy_basic": {
-      "idle": { "frameDuration": 150, "fps": 8 },
-      "walk": { "frameDuration": 120, "fps": 10 },
-      "attack": { "frameDuration": [100, 80, 80, 80, 100], "fps": 12 },
-      "death": { "frameDuration": 150, "fps": 8 }
-    },
-    "enemy_fast": {
-      "idle": { "frameDuration": 150, "fps": 8 },
-      "walk": { "frameDuration": 80, "fps": 15 },
-      "attack": { "frameDuration": [80, 60, 60, 80], "fps": 15 },
-      "death": { "frameDuration": 150, "fps": 8 }
-    },
-    "enemy_tank": {
-      "idle": { "frameDuration": 150, "fps": 8 },
-      "walk": { "frameDuration": 150, "fps": 8 },
-      "attack": { "frameDuration": [120, 100, 100, 100, 100, 120], "fps": 10 },
-      "death": { "frameDuration": 200, "fps": 6 }
-    }
+    "version": "1.0.0",
+    "description": "GodDog MVP Asset Manifest"
   }
 }
-

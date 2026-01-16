@@ -1,518 +1,186 @@
-# GodDog Asset Specification
-
-Complete list of all required assets for production, organized by category with technical specifications and creation guidelines.
-
-## Color Palette Recommendations
-
-**Primary Palette (16-32 colors):**
-- Background: Dark grays (#1a1a1a, #2a2a2a)
-- Player: Blue tones (#4a90e2, #6495ed)
-- Enemies: Red/Orange tones (#ff4444, #ff8844, #884444)
-- UI: White (#ffffff), Yellow (#ffff00), Green (#00ff00), Red (#ff0000)
-- Effects: Cyan (#00ffff), Orange (#ffa500), Yellow-Orange (#ffd700)
-
-**Technical Notes:**
-- Use indexed color mode (8-bit) for retro feel
-- Maintain consistent light source (top-left)
-- No anti-aliasing on sprites
-- Keep color count low for pixel art consistency
-- Ensure good contrast for gameplay visibility
-
+GodDog Asset Specification + GenAI Prompts (Boss clarified, ISOMETRIC)
+CRITICAL CAMERA / VIEW RULE
+- IMPORTANT: THE GAME IS VIEWED AT AN ISOMETRIC ANGLE. MAKE ALL ART RELEVANT TO THAT RULE.
+- Assume classic 2:1 isometric / 3⁄4 top-down view (objects rotated ~45°), with consistent top-left light.
+GLOBAL SETTING / CONTEXT (baked into every prompt)
+- Game: GodDog
+- Factions: K9 (dogs) vs 9Lives (cats)
+- Hero (Boss): a normal wolfhound hero; friendly, slightly dopey expression; intelligent eyes; approachable silhouette.
+- Art style: production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16–32 colors); indexed-color feel.
+- Palette guidance: Background dark grays (#1a1a1a, #2a2a2a); Player blues (#4a90e2, #6495ed); Enemies red/orange (#ff4444, #ff8844, #884444); UI white/yellow/green/red; Effects cyan/orange/yellow-orange.
+- Output: PNG with transparency where applicable; horizontal sprite strips for animations.
+- Negative prompt (append to all prompts unless UI-title-logo): no extra text, no letters, no watermark, no logo, no photorealism, no blur, no painterly rendering, no anti-aliasing.
 ---
-
-## 1. PLAYER SPRITES
-
-**Base Size:** 64x64 pixels per frame  
-**Format:** PNG with transparency  
-**Layout:** Horizontal strips (left to right)
-
-### 1.1 Player Idle Animation
-- **File:** `assets/sprites/player/idle.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Loop:** Yes
-- **Notes:** Subtle breathing/bobbing motion. Dog standing still, slight tail wag or ear movement.
-
-### 1.2 Player Walk Animation
-- **File:** `assets/sprites/player/walk.png`
-- **Dimensions:** 512x64 (8 frames × 64px)
-- **Frames:** 8
-- **Animation Speed:** 12 FPS (100ms per frame)
-- **Loop:** Yes
-- **Notes:** Full walk cycle. Include leg movement, body bounce, tail swing. Should feel energetic.
-
-### 1.3 Player Attack 1 (First Combo)
-- **File:** `assets/sprites/player/attack_1.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** Variable (80ms, 60ms, 60ms, 100ms)
-- **Loop:** No
-- **Notes:** Quick bite/snap forward. Frame 2-3 should show impact/extended reach. Anticipation → strike → follow-through.
-
-### 1.4 Player Attack 2 (Second Combo)
-- **File:** `assets/sprites/player/attack_2.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** Variable (80ms, 60ms, 60ms, 100ms)
-- **Loop:** No
-- **Notes:** Side swipe or different angle attack. Should feel like continuation of combo.
-
-### 1.5 Player Attack 3 (Third Combo - Finisher)
-- **File:** `assets/sprites/player/attack_3.png`
-- **Dimensions:** 320x64 (5 frames × 64px)
-- **Frames:** 5
-- **Animation Speed:** Variable (80ms, 60ms, 60ms, 60ms, 100ms)
-- **Loop:** No
-- **Notes:** Most powerful attack. Could be spinning attack or heavy lunge. Should feel impactful.
-
-### 1.6 Player Dodge
-- **File:** `assets/sprites/player/dodge.png`
-- **Dimensions:** 384x64 (6 frames × 64px)
-- **Frames:** 6
-- **Animation Speed:** 20 FPS (50ms per frame)
-- **Loop:** No
-- **Notes:** Quick roll/dash. Should show motion blur effect (stretched sprite) or multiple afterimages. Fast and snappy.
-
-### 1.7 Player Hurt
-- **File:** `assets/sprites/player/hurt.png`
-- **Dimensions:** 128x64 (2 frames × 64px)
-- **Frames:** 2
-- **Animation Speed:** 10 FPS (100ms per frame)
-- **Loop:** No
-- **Notes:** Flinch/recoil animation. Brief, shows impact. Can flash or show brief invulnerability effect.
-
-### 1.8 Player Death
-- **File:** `assets/sprites/player/death.png`
-- **Dimensions:** 384x64 (6 frames × 64px)
-- **Frames:** 6
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Loop:** No
-- **Notes:** Fall down animation. Can fade out or show final pose. Should feel final and dramatic.
-
+1) PLAYER SPRITES (64x64 per frame; isometric)
+1.1 Player Idle Animation
+File: assets/sprites/player/idle.png | 256x64 (4×64) | 4 frames | 8 FPS | Loop: yes
+Prompt: Pixel art sprite strip, 4 frames horizontal. A normal friendly wolfhound hero (Boss), slightly dopey but intelligent expression, standing idle in a 2:1 isometric / 3⁄4 top-down view. Subtle breathing/bobbing, tiny tail wag, small ear flick. Blue player palette, strong silhouette, top-left light. Transparent background.
+1.2 Player Walk Animation
+File: assets/sprites/player/walk.png | 512x64 (8×64) | 8 frames | 12 FPS | Loop: yes
+Prompt: Pixel art walk cycle sprite strip, 8 frames horizontal. Boss (normal friendly wolfhound) walking energetically in 2:1 isometric view; clear leg cycle, body bounce, tail swing. Blue player palette, top-left light, strong readability. Transparent background.
+1.3 Player Attack 1 (First Combo)
+File: assets/sprites/player/attack_1.png | 256x64 (4×64) | 4 frames | Loop: no
+Prompt: Pixel art attack combo #1 sprite strip, 4 frames horizontal, 2:1 isometric view. Boss does a quick bite/snap forward: anticipation → strike (clear impact frame) → follow-through. Exaggerated motion for isometric readability; blue palette; top-left light; transparent background.
+1.4 Player Attack 2 (Second Combo)
+File: assets/sprites/player/attack_2.png | 256x64 (4×64) | 4 frames | Loop: no
+Prompt: Pixel art attack combo #2 sprite strip, 4 frames, 2:1 isometric view. Boss performs a side swipe / body-check style continuation of combo with clear arcs readable from isometric angle. Blue palette; top-left light; transparent background.
+1.5 Player Attack 3 (Third Combo – Finisher)
+File: assets/sprites/player/attack_3.png | 320x64 (5×64) | 5 frames | Loop: no
+Prompt: Pixel art finisher combo sprite strip, 5 frames, 2:1 isometric view. Boss executes a heavy lunge or spin-finisher with strong anticipation and impactful keyframe; readable silhouette. Blue palette; top-left light; transparent background.
+1.6 Player Dodge
+File: assets/sprites/player/dodge.png | 384x64 (6×64) | 6 frames | 20 FPS | Loop: no
+Prompt: Pixel art dodge sprite strip, 6 frames, 2:1 isometric view. Boss does a quick dash/roll with stretched smear frame or 1–2 afterimages; snappy timing. Blue palette; top-left light; transparent background.
+1.7 Player Hurt
+File: assets/sprites/player/hurt.png | 128x64 (2×64) | 2 frames | Loop: no
+Prompt: Pixel art hurt/flinch sprite strip, 2 frames, 2:1 isometric view. Boss recoils with a brief impact pose; optionally a tiny flash cue. Blue palette; top-left light; transparent background.
+1.8 Player Death
+File: assets/sprites/player/death.png | 384x64 (6×64) | 6 frames | Loop: no
+Prompt: Pixel art death sprite strip, 6 frames, 2:1 isometric view. Boss collapses/falls into a final pose; can slightly fade at end. Dramatic but clean. Blue palette; top-left light; transparent background.
 ---
-
-## 2. ENEMY SPRITES
-
-**Base Size:** 64x64 pixels per frame  
-**Format:** PNG with transparency  
-**Layout:** Horizontal strips
-
-### 2.1 Basic Enemy
-
-#### Basic Idle
-- **File:** `assets/sprites/enemies/basic/idle.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Color:** Red (#ff4444)
-- **Notes:** Aggressive stance, slight movement. Should look menacing but not too complex.
-
-#### Basic Walk
-- **File:** `assets/sprites/enemies/basic/walk.png`
-- **Dimensions:** 384x64 (6 frames × 64px)
-- **Frames:** 6
-- **Animation Speed:** 10 FPS (120ms per frame)
-- **Notes:** Standard walk cycle. Should match player walk feel but more aggressive/stiff.
-
-#### Basic Attack
-- **File:** `assets/sprites/enemies/basic/attack.png`
-- **Dimensions:** 320x64 (5 frames × 64px)
-- **Frames:** 5
-- **Animation Speed:** Variable (100ms, 80ms, 80ms, 80ms, 100ms)
-- **Notes:** Lunge or bite attack. Clear wind-up and strike frames.
-
-#### Basic Death
-- **File:** `assets/sprites/enemies/basic/death.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Notes:** Quick death animation. Can fade or fall.
-
-### 2.2 Fast Enemy
-
-#### Fast Idle
-- **File:** `assets/sprites/enemies/fast/idle.png`
-- **Dimensions:** 192x64 (3 frames × 64px)
-- **Frames:** 3
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Color:** Orange (#ff8844)
-- **Notes:** Smaller, leaner silhouette. Quick, twitchy movements.
-
-#### Fast Walk
-- **File:** `assets/sprites/enemies/fast/walk.png`
-- **Dimensions:** 512x64 (8 frames × 64px)
-- **Frames:** 8
-- **Animation Speed:** 15 FPS (80ms per frame)
-- **Notes:** Fast, fluid movement. More frames for smoother animation.
-
-#### Fast Attack
-- **File:** `assets/sprites/enemies/fast/attack.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** Variable (80ms, 60ms, 60ms, 80ms)
-- **Notes:** Quick, darting attack. Should feel fast and unpredictable.
-
-#### Fast Death
-- **File:** `assets/sprites/enemies/fast/death.png`
-- **Dimensions:** 192x64 (3 frames × 64px)
-- **Frames:** 3
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Notes:** Quick death, matches fast enemy feel.
-
-### 2.3 Tank Enemy
-
-#### Tank Idle
-- **File:** `assets/sprites/enemies/tank/idle.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Color:** Dark Red (#884444)
-- **Notes:** Larger, bulkier silhouette. Slow, heavy movements.
-
-#### Tank Walk
-- **File:** `assets/sprites/enemies/tank/walk.png`
-- **Dimensions:** 320x64 (5 frames × 64px)
-- **Frames:** 5
-- **Animation Speed:** 8 FPS (150ms per frame)
-- **Notes:** Slow, heavy walk. Each step should feel impactful.
-
-#### Tank Attack
-- **File:** `assets/sprites/enemies/tank/attack.png`
-- **Dimensions:** 384x64 (6 frames × 64px)
-- **Frames:** 6
-- **Animation Speed:** Variable (120ms, 100ms, 100ms, 100ms, 100ms, 120ms)
-- **Notes:** Powerful, slow attack. Long wind-up, heavy impact.
-
-#### Tank Death
-- **File:** `assets/sprites/enemies/tank/death.png`
-- **Dimensions:** 320x64 (5 frames × 64px)
-- **Frames:** 5
-- **Animation Speed:** 6 FPS (200ms per frame)
-- **Notes:** Slow, dramatic death. Can include collapse or explosion effect.
-
+2) ENEMY SPRITES (64x64 per frame; isometric; cats)
+2.1 Basic Enemy
+Basic Idle
+File: assets/sprites/enemies/basic/idle.png | 256x64 (4×64)
+Prompt: Pixel art cat enemy idle strip, 4 frames, 2:1 isometric view. Aggressive feline stance, subtle motion, simple readable silhouette. Enemy red palette (#ff4444); top-left light; transparent background.
+Basic Walk
+File: assets/sprites/enemies/basic/walk.png | 384x64 (6×64)
+Prompt: Pixel art basic cat enemy walk cycle, 6 frames, 2:1 isometric view. Stiff/aggressive gait; readable steps. Red palette; top-left light; transparent background.
+Basic Attack
+File: assets/sprites/enemies/basic/attack.png | 320x64 (5×64)
+Prompt: Pixel art basic cat enemy attack, 5 frames, 2:1 isometric view. Clear wind-up → lunge/bite/scratch → recoil. Red palette; top-left light; transparent background.
+Basic Death
+File: assets/sprites/enemies/basic/death.png | 256x64 (4×64)
+Prompt: Pixel art basic cat enemy death, 4 frames, 2:1 isometric view. Quick collapse/fade; readable. Red palette; top-left light; transparent background.
+2.2 Fast Enemy
+Fast Idle
+File: assets/sprites/enemies/fast/idle.png | 192x64 (3×64)
+Prompt: Pixel art fast cat enemy idle, 3 frames, 2:1 isometric view. Smaller/leaner silhouette, twitchy motion. Orange palette (#ff8844); top-left light; transparent background.
+Fast Walk
+File: assets/sprites/enemies/fast/walk.png | 512x64 (8×64)
+Prompt: Pixel art fast cat enemy walk/run cycle, 8 frames, 2:1 isometric view. Fluid fast movement; clear legs; energetic. Orange palette; top-left light; transparent background.
+Fast Attack
+File: assets/sprites/enemies/fast/attack.png | 256x64 (4×64)
+Prompt: Pixel art fast cat enemy attack, 4 frames, 2:1 isometric view. Darting slash/leap; quick unpredictable strike. Orange palette; top-left light; transparent background.
+Fast Death
+File: assets/sprites/enemies/fast/death.png | 192x64 (3×64)
+Prompt: Pixel art fast cat enemy death, 3 frames, 2:1 isometric view. Quick fall/fade. Orange palette; top-left light; transparent background.
+2.3 Tank Enemy
+Tank Idle
+File: assets/sprites/enemies/tank/idle.png | 256x64 (4×64)
+Prompt: Pixel art tank cat enemy idle, 4 frames, 2:1 isometric view. Large bulky silhouette, slow heavy breathing motion. Dark red palette (#884444); top-left light; transparent background.
+Tank Walk
+File: assets/sprites/enemies/tank/walk.png | 320x64 (5×64)
+Prompt: Pixel art tank cat enemy walk, 5 frames, 2:1 isometric view. Heavy steps; weighty motion; readable. Dark red palette; top-left light; transparent background.
+Tank Attack
+File: assets/sprites/enemies/tank/attack.png | 384x64 (6×64)
+Prompt: Pixel art tank cat enemy attack, 6 frames, 2:1 isometric view. Long wind-up then heavy slam/bite; strong impact keyframe. Dark red palette; top-left light; transparent background.
+Tank Death
+File: assets/sprites/enemies/tank/death.png | 320x64 (5×64)
+Prompt: Pixel art tank cat enemy death, 5 frames, 2:1 isometric view. Slow dramatic collapse; can include small burst/dust. Dark red palette; top-left light; transparent background.
 ---
-
-## 3. NPC/FOLLOWER SPRITES
-
-**Base Size:** 32x32 pixels per frame  
-**Format:** PNG with transparency  
-**Layout:** Horizontal strip (shared file)
-
-### 3.1 Follower Sprite Sheet
-- **File:** `assets/sprites/npcs/follower.png`
-- **Dimensions:** 192x32 (6 frames total: 2 idle + 4 walk × 32px)
-- **Frames:** 6 (frames 1-2: idle, frames 3-6: walk)
-- **Idle Animation:** 2 frames, 5 FPS (200ms per frame)
-- **Walk Animation:** 4 frames, 10 FPS (120ms per frame)
-- **Color:** Green (#44ff44)
-- **Notes:** Smaller, friendly version of player. Simple animations. Should look like a companion dog.
-
+3) NPC / FOLLOWER SPRITES (32x32 per frame; isometric)
+3.1 Follower Sprite Sheet
+File: assets/sprites/npcs/follower.png | 192x32 (6×32) (2 idle + 4 walk)
+Prompt: Pixel art companion dog sprite strip (2 idle frames then 4 walk frames), 2:1 isometric view scaled to 32x32. Friendly small dog companion silhouette, simple readable motion. Green palette accent (#44ff44); top-left light; transparent background.
 ---
-
-## 4. EFFECT SPRITES
-
-### 4.1 Combat Effects
-
-#### Attack Slash Effect
-- **File:** `assets/effects/combat/attack_slash.png`
-- **Dimensions:** 256x64 (4 frames × 64px)
-- **Frames:** 4
-- **Animation Speed:** Fast (varies)
-- **Notes:** Slash/impact effect. Should appear at attack point. Bright, flashy. Can be semi-transparent.
-
-### 4.2 God Ability Effects
-
-#### Shield Aura
-- **File:** `assets/effects/god_abilities/shield.png`
-- **Dimensions:** 512x64 (8 frames × 64px)
-- **Frames:** 8
-- **Animation Speed:** Smooth loop
-- **Color:** Cyan (#00ffff)
-- **Notes:** Circular shield effect around player. Should pulse or rotate. Glowing, magical appearance.
-
+4) EFFECT SPRITES
+4.1 Attack Slash Effect
+File: assets/effects/combat/attack_slash.png | 256x64 (4×64)
+Prompt: Pixel art combat VFX slash strip, 4 frames. Bright arc slash + sparks, designed to read over isometric sprites; quick dissipate; can be semi-transparent. Warm/bright highlights; top-left light consistency.
+4.2 Shield Aura
+File: assets/effects/god_abilities/shield.png | 512x64 (8×64)
+Prompt: Pixel art looping magical shield aura strip, 8 frames. Cyan (#00ffff) circular energy ring that wraps the player in isometric view; pulsing/rotating feel; subtle particles; semi-transparent interior; crisp edge glow.
 ---
-
-## 5. UI ASSETS
-
-**Format:** PNG with transparency (where applicable)
-
-### 5.1 Health Bar
-- **File:** `assets/effects/ui/health_bar_bg.png`
-- **Dimensions:** 200x20
-- **Notes:** Background frame for health bar. Dark red/brown border.
-
-- **File:** `assets/effects/ui/health_bar_fill.png`
-- **Dimensions:** 200x20
-- **Notes:** Red fill bar. Should tile or stretch horizontally. Gradient from dark red to bright red.
-
-### 5.2 Cooldown Bar
-- **File:** `assets/effects/ui/cooldown_bar.png`
-- **Dimensions:** 200x15
-- **Notes:** Background for ability cooldown. Dark gray/black with border.
-
-### 5.3 Menu Assets
-
-#### Menu Background
-- **File:** `assets/ui/menu_background.png`
-- **Dimensions:** 1920x1080 (or match game resolution)
-- **Notes:** Main menu background. Can be static image or pattern. Dark, atmospheric.
-
-#### Title Logo
-- **File:** `assets/ui/title_logo.png`
-- **Dimensions:** 512x128
-- **Notes:** "GodDog" title text as pixel art logo. Should be prominent and readable.
-
-#### Menu Buttons
-- **File:** `assets/ui/button_idle.png`
-- **Dimensions:** 200x50
-- **Notes:** Default button state. Neutral appearance.
-
-- **File:** `assets/ui/button_hover.png`
-- **Dimensions:** 200x50
-- **Notes:** Hovered/selected button. Brighter or highlighted.
-
-- **File:** `assets/ui/button_pressed.png`
-- **Dimensions:** 200x50
-- **Notes:** Pressed button state. Darker or inset appearance.
-
+5) UI ASSETS
+5.1 Health Bar BG
+File: assets/effects/ui/health_bar_bg.png | 200x20
+Prompt: Pixel art UI frame for health bar, 200x20. Dark red/brown border, crisp corners, subtle bevel, transparent outside frame.
+5.1 Health Bar Fill
+File: assets/effects/ui/health_bar_fill.png | 200x20
+Prompt: Pixel art bar fill, 200x20, stretches/tiles cleanly. Red gradient dark→bright, pixel-consistent, no banding. Transparent background.
+5.2 Cooldown Bar
+File: assets/effects/ui/cooldown_bar.png | 200x15
+Prompt: Pixel art cooldown bar background, 200x15. Dark gray/black with border and subtle inner track; clean edges; transparent background.
+5.3 Menu Background
+File: assets/ui/menu_background.png | 1920x1080
+Prompt: Pixel art / retro menu background (not a sprite), dark atmospheric. Subtle K9 vs 9Lives motifs, distant silhouettes, moody environment; keep large clear negative space for UI overlay. No text.
+5.3 Title Logo
+File: assets/ui/title_logo.png | 512x128
+Prompt: Pixel art title logo reading “GodDog” (text included intentionally). Big readable letters, retro pixel type, subtle dog/cat motif (pawprint accents), strong contrast. Transparent background.
+5.3 Menu Buttons (Idle/Hover/Pressed)
+Files: assets/ui/button_idle.png, button_hover.png, button_pressed.png | 200x50 each
+Prompt: Pixel art UI button set, 200x50. Three states: idle neutral, hover brighter highlight, pressed darker/inset. Consistent border and shape; subtle GodDog theme detail but no text. Transparent background.
 ---
-
-## 6. TILE ASSETS
-
-**Base Size:** 64x64 pixels per tile  
-**Format:** PNG  
-**Layout:** Can be single tiles or tile sets (grid)
-
-### 6.1 Level 1 - The Crossing
-
-#### Ground Tiles
-- **File:** `assets/tiles/level1_crossing/ground.png`
-- **Dimensions:** 64x64 (single tile) or larger tile set
-- **Notes:** Basic ground texture. Can be dirt, stone, or grass. Should tile seamlessly.
-
-#### Water Tiles (Animated)
-- **File:** `assets/tiles/level1_crossing/water.png`
-- **Dimensions:** 256x64 (4 frames × 64px) or 64x64 per frame
-- **Frames:** 4
-- **Notes:** Animated water. Subtle movement. Should loop smoothly.
-
-#### Bridge Tiles
-- **File:** `assets/tiles/level1_crossing/bridge.png`
-- **Dimensions:** 64x64
-- **Notes:** Bridge/platform tile. Should connect with ground tiles.
-
-#### Obstacles
-- **File:** `assets/tiles/level1_crossing/obstacles.png`
-- **Dimensions:** Various (can be sprite sheet)
-- **Notes:** Rocks, logs, or other obstacles. Various sizes.
-
-### 6.2 Level 2 - Village of Bent Tails
-
-#### Grass Tiles
-- **File:** `assets/tiles/level2_village/grass.png`
-- **Dimensions:** 64x64 or tile set
-- **Notes:** Grass texture with variations for natural look.
-
-#### Path Tiles
-- **File:** `assets/tiles/level2_village/path.png`
-- **Dimensions:** 64x64 or tile set
-- **Notes:** Dirt/stone path. Should connect seamlessly.
-
-#### Building Walls
-- **File:** `assets/tiles/level2_village/building_wall.png`
-- **Dimensions:** 64x64
-- **Notes:** Wall texture for buildings. Should tile vertically and horizontally.
-
-#### Building Roofs
-- **File:** `assets/tiles/level2_village/building_roof.png`
-- **Dimensions:** 64x64
-- **Notes:** Roof tiles. Should tile horizontally.
-
-#### Door
-- **File:** `assets/tiles/level2_village/door.png`
-- **Dimensions:** 32x64
-- **Notes:** Door sprite. Taller than standard tile.
-
-### 6.3 Level 3 - The Scented Warrens
-
-#### Dirt Tiles
-- **File:** `assets/tiles/level3_warrens/dirt.png`
-- **Dimensions:** 64x64 or tile set
-- **Notes:** Dark dirt/earth texture. Should feel underground.
-
-#### Tunnel Walls
-- **File:** `assets/tiles/level3_warrens/tunnel_wall.png`
-- **Dimensions:** 64x64
-- **Notes:** Cave/tunnel wall texture. Darker than surface.
-
-#### Tunnel Ceiling
-- **File:** `assets/tiles/level3_warrens/tunnel_ceiling.png`
-- **Dimensions:** 64x64
-- **Notes:** Ceiling texture. Can be darker or show roots.
-
-#### Roots
-- **File:** `assets/tiles/level3_warrens/roots.png`
-- **Dimensions:** Various
-- **Notes:** Root decorations. Various sizes for variety.
-
-### 6.4 Level 4 - Trial of Divinity
-
-#### Stone Floor
-- **File:** `assets/tiles/level4_trial/stone_floor.png`
-- **Dimensions:** 64x64 or tile set
-- **Notes:** Carved stone floor. Should feel ancient/sacred.
-
-#### Stone Walls
-- **File:** `assets/tiles/level4_trial/stone_wall.png`
-- **Dimensions:** 64x64
-- **Notes:** Stone wall texture. Should tile well.
-
-#### Altar
-- **File:** `assets/tiles/level4_trial/altar.png`
-- **Dimensions:** 128x128
-- **Notes:** Large altar/prop. Centered piece.
-
-### 6.5 Level 5 - The Broken Throne
-
-#### Corrupted Ground
-- **File:** `assets/tiles/level5_throne/corrupted_ground.png`
-- **Dimensions:** 64x64 or tile set
-- **Notes:** Dark, corrupted ground. Can have purple/red tints.
-
-#### Throne
-- **File:** `assets/tiles/level5_throne/throne.png`
-- **Dimensions:** 128x192
-- **Notes:** Large throne prop. Taller than wide.
-
-#### Corruption Effect (Animated)
-- **File:** `assets/tiles/level5_throne/corruption.png`
-- **Dimensions:** 384x64 (6 frames × 64px)
-- **Frames:** 6
-- **Notes:** Animated corruption effect. Pulsing, dark energy.
-
+6) TILE ASSETS (64x64 tiles unless noted; isometric-readability)
+6.1 Level 1 – The Crossing
+Ground Tile
+File: assets/tiles/level1_crossing/ground.png | 64x64
+Prompt: Pixel art seamless ground tile for “The Crossing” in an isometric game: dirt/stone/grass mix that still tiles seamlessly on the game grid; top-left light; readable texture.
+Water Tiles (Animated)
+File: assets/tiles/level1_crossing/water.png | 256x64 (4×64)
+Prompt: Pixel art seamless animated water tile strip, 4 frames. Subtle ripples; edges must tile seamlessly; cool darker blues/teals; top-left light.
+Bridge Tile
+File: assets/tiles/level1_crossing/bridge.png | 64x64
+Prompt: Pixel art bridge/platform tile for isometric world: wooden planks or stone slab, clear silhouette, connects cleanly to ground tile edges; top-left light.
+Obstacles Sheet
+File: assets/tiles/level1_crossing/obstacles.png | various
+Prompt: Pixel art obstacle props sprite sheet (rocks, logs, broken signposts), designed to sit correctly in isometric view (top surfaces lit, side faces shaded). Transparent background.
+6.2 Level 2 – Village of Bent Tails
+Grass Tile
+File: assets/tiles/level2_village/grass.png | 64x64
+Prompt: Pixel art seamless grass tile with subtle variation cues (tiny flowers/patches), isometric-friendly shading; top-left light.
+Path Tile
+File: assets/tiles/level2_village/path.png | 64x64
+Prompt: Pixel art seamless dirt/stone path tile, readable edges, designed to connect to itself and blend with grass; isometric-friendly shading; top-left light.
+Building Wall Tile
+File: assets/tiles/level2_village/building_wall.png | 64x64
+Prompt: Pixel art building wall texture tile that works in isometric view (visible side face + subtle edge highlight), tiles vertically/horizontally; top-left light.
+Building Roof Tile
+File: assets/tiles/level2_village/building_roof.png | 64x64
+Prompt: Pixel art roof tile texture for isometric buildings (top plane emphasized, consistent shading), tiles horizontally; top-left light.
+Door
+File: assets/tiles/level2_village/door.png | 32x64
+Prompt: Pixel art door sprite (32x64) that fits an isometric building wall; readable frame, slight bevel; top-left light; transparent background.
+6.3 Level 3 – The Scented Warrens
+Dirt Tile
+File: assets/tiles/level3_warrens/dirt.png | 64x64
+Prompt: Pixel art seamless dark dirt/earth tile; underground feel; isometric-friendly shading; top-left light.
+Tunnel Wall
+File: assets/tiles/level3_warrens/tunnel_wall.png | 64x64
+Prompt: Pixel art cave/tunnel wall tile for isometric view (darker side faces, lighter edges), tiles cleanly; top-left light.
+Tunnel Ceiling
+File: assets/tiles/level3_warrens/tunnel_ceiling.png | 64x64
+Prompt: Pixel art ceiling tile with darker value and occasional roots/soil texture; isometric-friendly; top-left light.
+Roots
+File: assets/tiles/level3_warrens/roots.png | various
+Prompt: Pixel art root decoration sprites (various sizes) that overlay tunnels in isometric view; twisted roots; top-left light; transparent background.
+6.4 Level 4 – Trial of Divinity
+Stone Floor
+File: assets/tiles/level4_trial/stone_floor.png | 64x64
+Prompt: Pixel art carved stone floor tile; ancient/sacred; subtle runes/etching ok; tiles seamlessly; isometric-friendly shading; top-left light.
+Stone Wall
+File: assets/tiles/level4_trial/stone_wall.png | 64x64
+Prompt: Pixel art stone wall tile for an isometric temple; clean repeating blocks; darker side faces; tiles well; top-left light.
+Altar
+File: assets/tiles/level4_trial/altar.png | 128x128
+Prompt: Pixel art altar prop (128x128) for isometric view: top plane + two visible side faces, sacred carvings, strong silhouette. Centerpiece. Top-left light; transparent background.
+6.5 Level 5 – The Broken Throne
+Corrupted Ground
+File: assets/tiles/level5_throne/corrupted_ground.png | 64x64
+Prompt: Pixel art seamless corrupted ground tile; dark with subtle purple/red tints; cracks/ooze; tiles seamlessly; isometric-friendly shading; top-left light.
+Throne
+File: assets/tiles/level5_throne/throne.png | 128x192
+Prompt: Pixel art ruined throne prop (128x192) in isometric view: tall imposing silhouette, cracked stone/metal, corrupted accents; top plane + side faces; top-left light; transparent background.
+Corruption Effect (Animated)
+File: assets/tiles/level5_throne/corruption.png | 384x64 (6×64)
+Prompt: Pixel art animated corruption VFX strip, 6 frames. Pulsing dark energy w/ purple-red highlights; designed to overlay isometric tiles; loopable; semi-transparent ok.
 ---
-
-## 7. OPTIONAL/ADDITIONAL ASSETS
-
-### 7.1 Particle Effects (Programmatically Generated)
-These are created by code, but you can provide sprite sheets:
-- Hit sparks (16x16, 4 frames)
-- Blood particles (16x16, 3 frames)
-- Dust particles (16x16, 4 frames)
-- Magic particles (16x16, 6 frames)
-
-### 7.2 Boss Sprites (Future)
-- Corrupted Watchdog (Level 1 boss)
-- Pack Leader Zealot (Level 2 boss)
-- Avatar of False Obedience (Level 4 boss)
-- The Leashbearer (Level 5 boss)
-
-**Recommended Size:** 128x128 or larger for bosses
-
----
-
-## CREATION GUIDELINES
-
-### Pixel Art Best Practices
-
-1. **Consistency**
-   - Use consistent pixel size (no anti-aliasing)
-   - Maintain consistent light source (top-left)
-   - Keep color count low (16-32 colors recommended)
-
-2. **Animation Principles**
-   - **Anticipation:** Brief wind-up before actions
-   - **Follow-through:** Continue motion after impact
-   - **Squash and Stretch:** Exaggerate for impact
-   - **Clear Keyframes:** Make actions readable
-
-3. **Technical Requirements**
-   - Export as PNG with transparency
-   - Use power-of-2 dimensions when possible
-   - Keep file sizes reasonable (<500KB per sprite sheet)
-   - Test at actual game resolution (64x64 for sprites)
-
-4. **Color Guidelines**
-   - Use dithering sparingly for gradients
-   - Ensure good contrast for visibility
-   - Maintain readable silhouettes
-   - Use consistent palette across all assets
-
-5. **Animation Timing**
-   - Idle: 8-12 FPS (slow, subtle)
-   - Walk: 12-16 FPS (smooth, readable)
-   - Attack: 20-24 FPS (fast, impactful)
-   - Death: 8-10 FPS (dramatic, clear)
-
-### File Organization
-
-```
-assets/
-├── sprites/
-│   ├── player/          (8 files)
-│   ├── enemies/
-│   │   ├── basic/       (4 files)
-│   │   ├── fast/        (4 files)
-│   │   └── tank/        (4 files)
-│   └── npcs/            (1 file)
-├── effects/
-│   ├── combat/          (1 file)
-│   ├── god_abilities/   (1 file)
-│   └── ui/              (3 files)
-├── tiles/
-│   ├── level1_crossing/ (4+ files)
-│   ├── level2_village/  (5 files)
-│   ├── level3_warrens/  (4 files)
-│   ├── level4_trial/    (3 files)
-│   └── level5_throne/   (3 files)
-└── ui/                  (4 files)
-```
-
-### Priority Order for Creation
-
-1. **High Priority** (Core gameplay):
-   - Player sprites (all 8 animations)
-   - Basic enemy sprites
-   - Health bar UI
-   - Basic ground tiles
-
-2. **Medium Priority** (Enhanced gameplay):
-   - Fast and Tank enemy sprites
-   - Combat effects
-   - Menu UI
-   - Level-specific tiles
-
-3. **Low Priority** (Polish):
-   - Follower sprites
-   - God ability effects
-   - Advanced tile variations
-   - Boss sprites
-
----
-
-## TOTAL ASSET COUNT
-
-- **Player Sprites:** 8 files
-- **Enemy Sprites:** 12 files (4 per type × 3 types)
-- **NPC/Follower Sprites:** 1 file
-- **Effect Sprites:** 2 files
-- **UI Assets:** 7 files
-- **Tile Assets:** ~20+ files (varies by level detail)
-
-**Total:** ~50+ individual asset files
-
----
-
-## NOTES FOR ARTISTS
-
-1. **Style Consistency:** All assets should feel like they belong to the same world
-2. **Readability:** Sprites must be clear at game resolution (64x64)
-3. **Performance:** Keep sprite sheets reasonable in size
-4. **Modularity:** Tiles should tile seamlessly
-5. **Animation Flow:** Ensure animations loop smoothly where needed
-6. **Color Coding:** Use color to distinguish enemy types and game elements
-7. **Silhouette:** Strong silhouettes help with gameplay clarity
-
-This specification provides everything needed to create production-ready assets for GodDog!
+7) OPTIONAL / ADDITIONAL
+7.1 Particle Effects (optional sheets)
+Hit sparks 16x16 (4 frames): Pixel art sparks burst, very readable, warm highlights.
+Blood particles 16x16 (3 frames): Pixel art droplets/splats, minimal but clear.
+Dust particles 16x16 (4 frames): Pixel art dust puffs for isometric ground contact.
+Magic particles 16x16 (6 frames): Pixel art twinkles/orbs, cyan/orange variants.
+7.2 Boss Sprites (Future; larger)
+Corrupted Watchdog / Pack Leader Zealot / Avatar of False Obedience / The Leashbearer: recommend 128x128+ frames; must also be 2:1 isometric view.
 
