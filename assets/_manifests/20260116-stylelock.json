@@ -1,0 +1,19 @@
+{
+  "batch_id": "20260116-stylelock",
+  "date_utc": "2026-01-16",
+  "status": "draft",
+  "blocked": true,
+  "blocker": "Generated preview image URL redirects infinitely from sandbox; unable to download for slicing + committing.",
+  "entries": [
+    {
+      "asset_id": "player_idle",
+      "path": "assets/sprites/player/idle.png",
+      "format": "png",
+      "dimensions": "64x64",
+      "model": "gemini-3-pro-image-preview",
+      "seed": null,
+      "prompt": "top-down pixel-art dog hero sprite sheet (style lock), transparent background",
+      "status": "draft"
+    }
+  ]
+}
