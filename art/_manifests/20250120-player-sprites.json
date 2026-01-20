@@ -1,0 +1,134 @@
+{
+  "batch_id": "20250120-player-sprites",
+  "created_at": "2026-01-20T17:55:28Z",
+  "assets": [
+    {
+      "asset_id": "player_idle",
+      "filename": "idle.png",
+      "path": "assets/sprites/player/idle.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 256,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art sprite strip, 4 frames horizontal. A normal friendly wolfhound hero (Boss), slightly dopey but intelligent expression, standing idle in a 2:1 isometric / 3/4 top-down view. Subtle breathing/bobbing, tiny tail wag, small ear flick. Blue player palette (#4a90e2, #6495ed), strong silhouette, top-left light. Transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors); indexed-color feel.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:52:16Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_walk",
+      "filename": "walk.png",
+      "path": "assets/sprites/player/walk.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 512,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art walk cycle sprite strip, 8 frames horizontal. Boss (normal friendly wolfhound) walking energetically in 2:1 isometric view; clear leg cycle, body bounce, tail swing. Blue player palette (#4a90e2, #6495ed), top-left light, strong readability. Transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors).",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:52:40Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_attack_1",
+      "filename": "attack_1.png",
+      "path": "assets/sprites/player/attack_1.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 256,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art attack combo #1 sprite strip, 4 frames horizontal, 2:1 isometric view. Boss does a quick bite/snap forward: anticipation \u2192 strike (clear impact frame) \u2192 follow-through. Exaggerated motion for isometric readability; blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:53:07Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_attack_2",
+      "filename": "attack_2.png",
+      "path": "assets/sprites/player/attack_2.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 256,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art attack combo #2 sprite strip, 4 frames, 2:1 isometric view. Boss performs a side swipe / body-check style continuation of combo with clear arcs readable from isometric angle. Blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors).",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:53:43Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_attack_3",
+      "filename": "attack_3.png",
+      "path": "assets/sprites/player/attack_3.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 320,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art finisher combo sprite strip, 5 frames, 2:1 isometric view. Boss executes a heavy lunge or spin-finisher with strong anticipation and impactful keyframe; readable silhouette. Blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors); indexed-color feel.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:54:05Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_dodge",
+      "filename": "dodge.png",
+      "path": "assets/sprites/player/dodge.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 384,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art dodge sprite strip, 6 frames, 2:1 isometric view. Boss does a quick dash/roll with stretched smear frame or 1-2 afterimages; snappy timing. Blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors); indexed-color feel.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:54:25Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_hurt",
+      "filename": "hurt.png",
+      "path": "assets/sprites/player/hurt.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 128,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art hurt/flinch sprite strip, 2 frames, 2:1 isometric view. Boss recoils with a brief impact pose; optionally a tiny flash cue. Blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors); indexed-color feel.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:54:47Z",
+      "status": "draft"
+    },
+    {
+      "asset_id": "player_death",
+      "filename": "death.png",
+      "path": "assets/sprites/player/death.png",
+      "category": "sprite",
+      "dimensions": {
+        "width": 384,
+        "height": 64
+      },
+      "format": "png",
+      "prompt": "Pixel art death sprite strip, 6 frames, 2:1 isometric view. Boss collapses/slumps down in an exaggerated but sympathetic defeat animation; final frame lies on ground. Blue palette (#4a90e2, #6495ed); top-left light; transparent background. Production-ready pixel art; crisp readability at 64x64; no anti-aliasing; limited palette (16-32 colors); indexed-color feel.",
+      "model": "fal-ai/nano-banana-pro",
+      "seed": null,
+      "generated_at": "2026-01-20T17:55:28Z",
+      "status": "draft"
+    }
+  ]
+}
